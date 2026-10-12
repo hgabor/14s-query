@@ -8,8 +8,19 @@
     </title>
     <link rel="stylesheet" href="/style.css">
 </head>
-<body>
+<body style="background-color: <%= bgcolor %>;">
     <h1><%= title %></h1>
-    Hello EJS!
+    
+    <%# Alapértelmezetten GET típusú form %>
+    <form>
+        <%# Nekünk kell visszatölteni az űrlapra, magától nem jegyzi meg az előző értékeket %>
+        Név:
+        <input type="text" name="title" value="<%= title %>"><br>
+        Háttérszín:
+        <input type="color" name="bgcolor" value="<%= bgcolor %>"><br>
+        Életkor:
+        <input type="number" name="eletkor" value="<%= eletkor %>"><br>
+        <button type="submit">Cím beállítása</button>
+    </form>
 </body>
 </html>
